@@ -1,0 +1,17 @@
+-- 1. film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+SELECT DISTINCT replacement_cost FROM film;
+
+-- 2. film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır? / Cevap: 21 tane.
+SELECT COUNT (DISTINCT replacement_cost) FROM film;
+
+-- 3. film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir? / Cevap: 9 tanesi.
+SELECT COUNT (title) FROM film
+WHERE title ILIKE 't%' AND rating = 'G';
+
+-- 4. country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır? / Cevap: 13 tanesi.
+SELECT COUNT (country) FROM country
+WHERE country ILIKE '_____';
+
+-- 5. city tablosundaki şehir isimlerinin kaç tanesi 'R' veya r karakteri ile biter? / Cevap: 33 tanesi.
+SELECT COUNT (city) FROM city
+WHERE city ILIKE '%r';
